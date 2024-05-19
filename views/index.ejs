@@ -1,0 +1,40 @@
+<!---- Adding Header -->
+<%- include('partials/header.ejs') %>
+
+<main class="container">
+
+  <img src="images/pexels-olly-3776817.jpg" alt="giffy" width="100%">
+  
+  <div id="all_posts">
+
+  
+      <% for (let item of store) { %>
+        <div >
+          <a class="post-picture" href="/<%= item.title %>"><img  src= "images/<%= item.upload%> " alt="hello" width="200vw" height="200vh"></a>
+          <p><%= item.genre %></p>
+          <h3><%= item.title %></h3>
+          <p><%= item.author %></p>
+          
+          <a href="/edit/<%= item.title %>"><button >Edit</button></a>
+          <a href="/delete/<%= item.title %>"><button>Delete</button></a>
+          
+          
+
+        </div>
+        
+        <% } %>
+      
+        
+      
+
+    
+    
+    
+
+  </div> 
+  
+
+  
+</main>
+
+<%- include('partials/footer.ejs') %>

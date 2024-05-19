@@ -1,0 +1,32 @@
+<!---- Adding Header -->
+<%- include('partials/header.ejs') %>
+
+<main>
+    
+        <div id="#specific_post" class="container">
+            <p><%= locals.store.genre || "hi" %></p>
+            <h1><%=locals.store.title || "hi" %> </h1>
+            <p></p>
+            <img  src= "images/<%= locals.store.upload || "hi" %> " alt="hello" width="100%" height="3%">
+            <p id="content"><%= locals.store.message || "hi"  %></p>
+            <a href="/edit/<%= locals.store.title || "hi" %>"><button id="postbutton">Edit</button></a>
+            
+
+        </div>
+        
+        
+      
+        
+      
+
+    
+    
+    
+
+
+  
+
+  
+</main>
+
+<%- include('partials/footer.ejs') %>
